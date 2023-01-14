@@ -4,16 +4,19 @@ import {
   AppsListItemTitle,
   AppsListItemReleased,
   AppsListItemPrice,
+  NavItem,
 } from './AppsListItem.styeld';
 
-export const AppsListItem = ({ imgUrl, title, released, price }) => {
+export const AppsListItem = ({ id, imgUrl, title, released, price }) => {
   return (
-    <li>
+    <li key={id}>
       <AppsListItemWrapper>
-        <AppsListItemImg src={imgUrl} alt="Game logo image" />
-        <AppsListItemTitle>{title}</AppsListItemTitle>
-        <AppsListItemReleased>{released}</AppsListItemReleased>
-        <AppsListItemPrice>{price}</AppsListItemPrice>
+        <NavItem to={`/games/${id}`}>
+          <AppsListItemImg src={imgUrl} alt="Game logo image" />
+          <AppsListItemTitle>{title}</AppsListItemTitle>
+          <AppsListItemReleased>{released}</AppsListItemReleased>
+          <AppsListItemPrice>{price}</AppsListItemPrice>
+        </NavItem>
       </AppsListItemWrapper>
     </li>
   );

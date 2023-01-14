@@ -30,6 +30,7 @@ const theme = {
   },
   radii: {
     header: '10px',
+    detailes: '25px;',
   },
 };
 
