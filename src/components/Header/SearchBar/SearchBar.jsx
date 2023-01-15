@@ -2,10 +2,9 @@ import { SearchInput } from './SearchBar.styled';
 import { useState } from 'react';
 import { fetchGames } from 'Redux/apps/apps-operations';
 import { useDispatch } from 'react-redux';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 export const SearchBar = () => {
-  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const initialSearch = searchParams.get('search')
     ? searchParams.get('search')
@@ -32,7 +31,6 @@ export const SearchBar = () => {
     }
 
     dispatch(fetchGames(query));
-    navigate('/result');
     setSearchParams({
       search: query.search,
       page: 1,
