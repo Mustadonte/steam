@@ -1,19 +1,10 @@
 import axios from 'axios';
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://steam2.p.rapidapi.com/search/Strike/page/1',
-//   headers: {
-//     'X-RapidAPI-Key': 'd968d09179msh73ca21ec29623ffp1764d8jsn20a18745ae32',
-//     'X-RapidAPI-Host': 'steam2.p.rapidapi.com',
-//   },
-// };
-
 const instance = axios.create({
   baseURL: 'https://steam2.p.rapidapi.com/',
   headers: {
-    'X-RapidAPI-Key': 'd968d09179msh73ca21ec29623ffp1764d8jsn20a18745ae32',
-    'X-RapidAPI-Host': 'steam2.p.rapidapi.com',
+    // 'X-RapidAPI-Key': 'd968d09179msh73ca21ec29623ffp1764d8jsn20a18745ae32',
+    // 'X-RapidAPI-Host': 'steam2.p.rapidapi.com',
   },
 });
 
