@@ -19,6 +19,7 @@ export const ListSort = () => {
     <ListSortWrapper>
       <StyledListSort htmlFor="listSort">
         <StyledSelect name="listSort" onChange={handleChange}>
+          <StyledOption value="">...</StyledOption>
           <StyledOption value="Price">Price</StyledOption>
           <StyledOption value="Publish_Date">Publish Date</StyledOption>
         </StyledSelect>
